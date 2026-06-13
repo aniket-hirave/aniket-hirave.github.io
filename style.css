@@ -107,6 +107,24 @@ section h2{
     text-decoration:none;
 }
 
+.social-links {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #00bfff;
+    font-size: 35px;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: #ffffff;
+}
+
 footer{
     text-align:center;
     padding:20px;
