@@ -64,27 +64,28 @@ scene.add(particles);
 
 camera.position.z = 10;
 
+let mouseX = 0;
+let mouseY = 0;
+
+document.addEventListener("mousemove", (event) => {
+
+    mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+    mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+
+});
+
 function animate() {
 
     requestAnimationFrame(animate);
 
-    particles.rotation.y += 0.0015;
-    particles.rotation.x += 0.0005;
+    particles.rotation.y += 0.001;
+
+    particles.rotation.y += (mouseX * 0.5 - particles.rotation.y) * 0.02;
+
+    particles.rotation.x += (mouseY * 0.3 - particles.rotation.x) * 0.02;
 
     renderer.render(scene, camera);
 }
 
 animate();
-
-window.addEventListener("resize", () => {
-
-    camera.aspect =
-        window.innerWidth / window.innerHeight;
-
-    camera.updateProjectionMatrix();
-
-    renderer.setSize(
-        window.innerWidth,
-        window.innerHeight
-    );
 });
