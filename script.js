@@ -1,5 +1,6 @@
+// Smooth Scroll Navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
         document.querySelector(this.getAttribute('href'))
@@ -10,6 +11,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 console.log("Portfolio Loaded Successfully");
+
+// Three.js Background Animation
 const container = document.getElementById("bg-animation");
 
 const scene = new THREE.Scene();
@@ -22,12 +25,14 @@ const camera = new THREE.PerspectiveCamera(
 );
 
 const renderer = new THREE.WebGLRenderer({
-    alpha: true
+    alpha: true,
+    antialias: true
 });
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 container.appendChild(renderer.domElement);
 
+// Create Particle Sphere
 const geometry = new THREE.BufferGeometry();
 const vertices = [];
 
@@ -52,7 +57,7 @@ geometry.setAttribute(
 
 const material = new THREE.PointsMaterial({
     color: 0x00bfff,
-    size: 0.05
+    size: 0.06
 });
 
 const particles = new THREE.Points(
@@ -64,28 +69,48 @@ scene.add(particles);
 
 camera.position.z = 10;
 
+// Mouse Tracking
 let mouseX = 0;
 let mouseY = 0;
 
-document.addEventListener("mousemove", (event) => {
+document.addEventListener("mousemove", (e) => {
 
-    mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-    mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+    mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+    mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
 
 });
 
+// Animation Loop
 function animate() {
 
     requestAnimationFrame(animate);
 
+    // Auto Rotation
     particles.rotation.y += 0.001;
 
-    particles.rotation.y += (mouseX * 0.5 - particles.rotation.y) * 0.02;
+    // Cursor Follow Effect
+    particles.rotation.x += (mouseY * 0.5 - particles.rotation.x) * 0.05;
+    particles.rotation.y += (mouseX * 0.5 - particles.rotation.y) * 0.05;
 
-    particles.rotation.x += (mouseY * 0.3 - particles.rotation.x) * 0.02;
+    // Slight Movement
+    particles.position.x += (mouseX * 0.5 - particles.position.x) * 0.03;
+    particles.position.y += (mouseY * 0.5 - particles.position.y) * 0.03;
 
     renderer.render(scene, camera);
 }
 
 animate();
+
+// Responsive Resize
+window.addEventListener("resize", () => {
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(
+        window.innerWidth,
+        window.innerHeight
+    );
+
 });
