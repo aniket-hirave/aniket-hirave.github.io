@@ -1,146 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniket Hirave | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Portfolio of Aniket Hirave - Computer Engineering Student, Web Developer, and AI Enthusiast. Showcase of projects, skills, education, and contact details.">
+  <meta name="keywords" content="Aniket Hirave, Portfolio, Web Developer, Computer Engineering Student, AI Enthusiast, HTML CSS JavaScript, Projects">
+  <meta name="author" content="Aniket Hirave">
+  <title>Aniket Hirave | Personal Portfolio</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/profile.png">
+
+  <!-- Google Fonts: Outfit and Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
- <div id="bg-animation"></div>
-<header>
-    <nav>
-        <h2 class="logo">Aniket Hirave</h2>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+<body class="light-theme">
+  <div id="bg-animation"></div>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <img src="assets/ah_logo.png" alt="AH Logo" class="logo-img">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
 
-    <div class="hero">
-        <h1>Hello, I'm <span>Aniket Hirave</span></h1>
-        <p>Computer Engineering Student | Developer | AI Enthusiast</p>
-        <a href="#contact" class="btn">Contact Me</a>
+      <!-- Theme & Mobile Menu Actions -->
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </div>
-</header>
+  </header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a Diploma Computer Engineering student at Government Polytechnic Awasari Khurd.
-        Turning ideas into code and code into solutions. Passionate about technology, innovation, and building projects that make an impact.
-    </p>
-</section>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-subtitle">Welcome to my space</span>
+          <h1 class="hero-title">Hi, I'm <span class="highlight">Aniket Hirave</span></h1>
+          <h2 class="hero-tagline">
+            I am a <span class="typing-text" id="typingText"></span>
+          </h2>
+          <p class="hero-desc">
+            Diploma Computer Engineering student at Government Polytechnic Awasari Khurd. Turning ideas into code and code into solutions. Passionate about technology, innovation, and building projects that make an impact.
+          </p>
 
-<section id="skills">
-    <h2>Skills</h2>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              Contact Me <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
 
-    <div class="skills-container">
-        <div class="card">HTML</div>
-        <div class="card">CSS</div>
-        <div class="card">C & C++</div>
-        <div class="card">Java & Advance Java</div>
-       
-        <div class="card">JavaScript</div>
-        <div class="card">Machine Learning</div>
-        <div class="card">AI</div>
-        <div class="card">Python</div>
-        <div class="card">Git & GitHub</div>
+          <div class="social-links">
+            <a href="https://github.com/aniket-hirave" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/aniket-hirave/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com/anikett_hirave" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/919373924329" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-illustration">
+          <div class="illustration-wrapper">
+            <img src="assets/hero-illustration.png" alt="Developer Illustration" class="illustration-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section section-padding scroll-reveal" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">Get to Know Me</span>
+          <h2 class="title">About Me</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image-container">
+            <div class="image-wrapper">
+              <img src="assets/profile.png" alt="Aniket Hirave Profile" class="profile-img">
+            </div>
+          </div>
+
+          <div class="about-content">
+            <h3 class="about-heading">Objective</h3>
+            <p class="about-objective">
+              Aspiring Diploma Computer Engineering student seeking to leverage robust software development methodologies, web design skills, and a foundational understanding of machine learning algorithms to create digital solutions that solve real-world problems.
+            </p>
+
+            <h3 class="about-heading">My Journey</h3>
+            <p class="about-bio">
+              Hello! I'm Aniket Hirave, currently pursuing my Diploma in Computer Engineering at Government Polytechnic Awasari Khurd. I am passionate about turning ideas into code and code into solutions, constantly exploring technology, innovation, and building projects that make an impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section section-padding scroll-reveal" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">Academic Journey</span>
+          <h2 class="title">My Education</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="education-list">
+          <!-- Item 1 -->
+          <div class="education-card">
+            <div class="education-meta">
+              <span class="education-date">2023 - 2026</span>
+              <span class="education-gpa"><i class="fa-solid fa-award"></i> Diploma</span>
+            </div>
+            <h3 class="education-title">Diploma in Computer Engineering</h3>
+            <p class="education-institution"><i class="fa-solid fa-university"></i> Government Polytechnic Awasari Khurd</p>
+            <p class="education-description">Focusing on object-oriented programming, data structures, algorithms, operating systems, databases, and core web technologies. Active explorer of software design and development.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section section-padding scroll-reveal" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">What I Bring to the Table</span>
+          <h2 class="title">My Skills</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Category 1 -->
+          <div class="skills-category-card">
+            <div class="category-header">
+              <i class="fa-solid fa-code category-icon"></i>
+              <h3>Frontend Development</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 2 -->
+          <div class="skills-category-card">
+            <div class="category-header">
+              <i class="fa-solid fa-laptop-code category-icon"></i>
+              <h3>Languages & AI/ML</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C & C++</span>
+              <span class="skill-tag">Java & Advance Java</span>
+              <span class="skill-tag">Machine Learning</span>
+              <span class="skill-tag">AI</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 3 -->
+          <div class="skills-category-card">
+            <div class="category-header">
+              <i class="fa-solid fa-screwdriver-wrench category-icon"></i>
+              <h3>Tools & Collaboration</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git & GitHub</span>
+		<span class="skill-tag">LinkedIn</span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section section-padding scroll-reveal" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">My Work Showcase</span>
+          <h2 class="title">Featured Projects</h2>
+          <div class="divider"></div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Dev</button>
+          <button class="filter-btn" data-filter="ai">AI / ML</button>
+          <button class="filter-btn" data-filter="java">Java</button>
+          <button class="filter-btn" data-filter="cpp">C / C++</button>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project 1: Corruption Complaint and Tracking System -->
+          <div class="project-card" data-category="web">
+            <div class="project-info">
+              <span class="project-category-tag">Web Dev / Security</span>
+              <h3 class="project-title">Corruption Complaint and Tracking System</h3>
+              <p class="project-desc">A transparent platform for reporting corruption securely. Features distinct modules for Citizens (register and submit complaints with evidence), Authorities (receive and review cases), and Admins (verify workflows). Includes real-time tracking, feedback ratings, email updates, and notifications.</p>
+            </div>
+          </div>
+
+          <!-- Project 2: Interactive Storytelling App -->
+          <div class="project-card" data-category="web">
+            <div class="project-info">
+              <span class="project-category-tag">Web Dev / Entertainment</span>
+              <h3 class="project-title">Interactive Storytelling App</h3>
+              <p class="project-desc">A story-based application where users make key choices that dynamically affect the storyline and lead to different custom endings.</p>
+            </div>
+          </div>
+
+          <!-- Project 3: QR code Generator and Reader -->
+          <div class="project-card" data-category="web">
+            <div class="project-info">
+              <span class="project-category-tag">Web Dev / Utility</span>
+              <h3 class="project-title">QR Code Generator & Reader</h3>
+              <p class="project-desc">A fast, lightweight, and user-friendly system allowing users to instantly generate QR codes from input data and scan QR codes using a device camera to decode and display stored information.</p>
+            </div>
+          </div>
+
+          <!-- Project 4: ATM Simulator -->
+          <div class="project-card" data-category="java cpp">
+            <div class="project-info">
+              <span class="project-category-tag">Java / C++ / Logic</span>
+              <h3 class="project-title">ATM Simulator</h3>
+              <p class="project-desc">An interactive simulation demonstrating bank ATM operation, built on transaction logics with a clean UI workflow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section-padding scroll-reveal" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">Get in Touch</span>
+          <h2 class="title">Contact Me</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="contact-methods-container">
+          <div class="contact-methods">
+            <a href="mailto:anikethirave55@gmail.com" class="contact-method-card">
+              <i class="fa-solid fa-envelope"></i>
+              <span>anikethirave55@gmail.com</span>
+            </a>
+            <a href="tel:+919373924329" class="contact-method-card">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 93739 24329</span>
+            </a>
+            <div class="contact-method-card non-interactive">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Pune, Maharashtra, India</span>
+            </div>
+                     </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p class="copyright">&copy; 2026 Aniket Hirave. All Rights Reserved.</p>
+      <div class="footer-social-links">
+        <a href="https://github.com/aniket-hirave" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/aniket-hirave/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://instagram.com/anikett_hirave" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/919373924329" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
     </div>
-</section>
+  </footer>
 
-<section id="projects">
-    <h2>Projects</h2>
+  <!-- Scroll to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
-    <div class="project-card">
-        <h3>Interactive Storytelling App</h3>
-        <p>
-            A story-based application where users make choices that affect the storyline.
-        </p>
-    </div>
-
-    <div class="project-card">
-        <h3>Corruption Complaint and Tracking System</h3>
-        <p>
-            The application is designed to reduce corruption by providing a transparent and accountable platform for reporting and tracking corrupt activities. 
-            This system offers a centralized interface where citizens can report incidents of corruption easily and securely. The application consists of three main modules: User (Citizen), Authority, and Admin/Monitoring Agency.
-            The User can register and submit complaints related to corruption with details such as location, description, and supporting evidence. The Authority module allows government officials or concerned departments to receive, review, and take action on reported cases. 
-            The Admin module is responsible for monitoring all activities, verifying complaints, and ensuring proper workflow and accountability. In this system, features like real-time complaint tracking, status updates, e-mails and notifications are included to keep users informed about their reports.
-            The system also includes a feedback mechanism where users can rate the response and action taken by authorities, ensuring service quality and transparency. The main motivation of this project is to create an easy-to-use and efficient platform that encourages citizens to report corruption 
-            without fear and helps authorities take timely action, thereby promoting transparency, accountability, and good governance.
-        </p>
-    </div>
-
-    <div class="project-card">
-        <h3>ATM Simulator</h3>
-        <p>
-            Based on basic logic with interactive UI
-        </p>
-    </div>
-
-      <div class="project-card">
-        <h3>QR code Generator and Reader</h3>
-        <p>
-            This project focuses on developing a fast, lightweight, and user-friendly 
-                system that allows users to: 
-                ▪ Generate QR codes instantly from input data  
-                ▪ Scan QR codes using a device camera  
-                ▪ Decode and display the stored information 
-        </p>
-    </div>
-
-   
-</section>
-
-<section id="education">
-    <h2>Education</h2>
-
-    <div class="edu-card">
-        <h3>Government Polytechnic Awasari Khurd</h3>
-        <p>Diploma in Computer Engineering (2023 - 2026)</p>
-    </div>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-
-    <p>Email: anikethirave55@gmail.com</p>
-    <p>MOB NO: 9373924329</p>
-    
-
-
-    <div class="social-links">
-   
-    <a href="https://www.linkedin.com/in/aniket-hirave/" target="_blank">
-        <i class="fab fa-linkedin"></i>
-    </a>
-
-         <a href="https://github.com/aniket-hirave" target="_blank">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-     <a href="https://wa.me/919373924329" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-    </a>   
-        
-    <a href="https://instagram.com/anikett_hirave" target="_blank">
-        <i class="fab fa-instagram"></i>
-    </a>
-</div>
-</section>
-
-<footer>
-    <p>© Aniket Hirave. All Rights Reserved.</p>
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="script.js"></script>
-</body>
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
 </body>
 </html>
